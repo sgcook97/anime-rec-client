@@ -17,27 +17,6 @@ Users can search for anime, view details, rate, and access content-based recomme
 
 *Other features will be implented in the future.*
 
-## Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/sgcook97/anime-recommender-client.git
-   cd anime-recommender-client
-
-2. Install dependencies:
-    ```bash
-    npm install
-    # or
-    yarn install
-
-2. Run the application:
-    ```bash
-    npm run next-dev
-    # or
-    yarn next-dev
-
-Access the application at http://localhost:3000 in your web browser.
-
 ## Usage
 
 * **Registration/Login**: Register an account or log in to access personalized recommendations.
