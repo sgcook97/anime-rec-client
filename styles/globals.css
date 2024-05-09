@@ -9,6 +9,52 @@ body {
     color: #ffffff;
 }
 
+.bg-img {
+    z-index: -999;
+}
+
+.enter-button {
+    border: none;
+    color: #e7deb9;
+    background-color: #f59feece;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(255, 0, 255, 0.59);
+}
+
+.enter-button:hover {
+    background-color: magenta;
+    transition: 500ms;
+}
+
+.front-page-heading {
+    font-size: 100px;
+    text-shadow: 2px 1px 4px rgba(255, 0, 255, 0.589);
+}
+
+.front-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.back-arrow {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 2px;
+    width: 45px;
+}
+
+.back-arrow-text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
 .index-app {
     text-align: center;
     display: flex;

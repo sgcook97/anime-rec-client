@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 type Inputs = {
     username: string,
@@ -43,20 +44,35 @@ const Login = (props : any) => {
     }
 
     return (
-        <div className="auth-container" suppressHydrationWarning={true} >
-            <h3>Log in</h3>
-            <form onSubmit={handleSubmit(SubmitForm)} className="login-form" >
-            <input className="m-1" {...register("username", {required:true, maxLength:30})} placeholder="username" />  
-                {errors.username && <span style={{ color:"red" }}>Username is required</span>}
-                {errors.username?.type=="maxLength" && <span style={{ color:"red" }}>Max characters allowed is 30</span>}     
-                <input className="m-1" {...register("password", {required:true, maxLength:15, minLength:6})} placeholder="password" type="password" autoComplete="off" />
-                {errors.password && <span style={{ color:"red" }}>Password is required</span>}
-                {errors.password?.type=="minLength" && <span style={{ color:"red" }}>Min characters allowed is 6</span>}
-                {errors.password?.type=="maxLength" && <span style={{ color:"red" }}>Max characters allowed is 15</span>}
-                <button className="login-button" type="submit" >Log in</button>
-            </form>
-            <a onClick={() => props.onFormSwitch('register')} className="change-form" >Don&apos;t have an account? Register here</a>
-        </div>
+        <>
+            <div className="back-arrow" onClick={props.ToggleFrontPage} >
+                <IoMdArrowRoundBack />
+                <p className="back-arrow-text">back</p>
+            </div>
+            <div>
+                <div>
+                    <h5 style={{margin: "2px"}}>Test Account</h5>
+                    <p style={{textAlign : "center"}}>
+                        Username: testuser<br />
+                        Password: testpass123
+                    </p>
+                </div>
+                <div className="auth-container" suppressHydrationWarning={true} >
+                    <h3>Log in</h3>
+                    <form onSubmit={handleSubmit(SubmitForm)} className="login-form" >
+                    <input className="m-1" {...register("username", {required:true, maxLength:30})} placeholder="username" />  
+                        {errors.username && <span style={{ color:"red" }}>Username is required</span>}
+                        {errors.username?.type=="maxLength" && <span style={{ color:"red" }}>Max characters allowed is 30</span>}     
+                        <input className="m-1" {...register("password", {required:true, maxLength:15, minLength:6})} placeholder="password" type="password" autoComplete="off" />
+                        {errors.password && <span style={{ color:"red" }}>Password is required</span>}
+                        {errors.password?.type=="minLength" && <span style={{ color:"red" }}>Min characters allowed is 6</span>}
+                        {errors.password?.type=="maxLength" && <span style={{ color:"red" }}>Max characters allowed is 15</span>}
+                        <button className="login-button" type="submit" >Log in</button>
+                    </form>
+                    <a onClick={() => props.onFormSwitch('register')} className="change-form" >Don&apos;t have an account? Register here</a>
+                </div>
+            </div>
+        </>
     );
 }
 
