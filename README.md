@@ -1,7 +1,7 @@
 # SamnRoll
 This repository contains the frontend of the Samnroll anime recommendation web app.
 
-Samnroll url: https://samnroll.vercel.app/
+Samnroll url: currently down due to cost of maintaining deployment
 
 <u>**Example user info:**</u><br>
 username: testuser<br>
